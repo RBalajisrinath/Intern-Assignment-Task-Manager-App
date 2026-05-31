@@ -18,7 +18,7 @@ const Dashboard = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await fetch('${API_URL}/api/tasks', {
+        const response = await fetch(`${API_URL}/api/tasks`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -74,7 +74,7 @@ const Dashboard = () => {
 
   // Create task
   const createTask = async (taskData) => {
-    const response = await fetch('${API_URL}/api/tasks', {
+    const response = await fetch(`${API_URL}/api/tasks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
